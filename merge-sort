@@ -20,8 +20,3 @@ def merge_sort(lista):
     if tam <= 1: return lista
     metade1, metade2 = merge_sort(lista[:int(tam/2)]), merge_sort(lista[int(tam/2):])
     return merge(metade1,metade2)
-
-
-lista = [8, 6, 2, 9, 1, 4, 5, 3, 7]
-
-print(merge_sort(lista))
