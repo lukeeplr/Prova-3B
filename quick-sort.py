@@ -9,20 +9,21 @@ def getpivot(arr, c, f):
         return pivot
 
 
-def quicksort(array):
-    tam = len(array)
+def quick_sort(arr):
+    tam = len(arr)
     if tam < 2:
-        return array
+        return arr
+    ppiv = getpivot(arr, 0, tam-1)
+    pivot = arr[ppiv]
     menor, igual, maior = [], [], []
-    pivot = array[getpivot(array, 0, len(array) - 1)]
-    for x in array:
-        if x < pivot: menor.append(x)
-        elif x > pivot: maior.append(x)
-        else: igual.append(x)
-    return (quicksort(menor) + igual + quicksort(maior))
-
-
-###########################################################
+    for x in arr:
+        if x < pivot:
+            menor.append(x)
+        elif x > pivot:
+            maior.append(x)
+        else:
+            igual.append(x)
+    return (quick_sort(menor) + igual + quick_sort(maior))
 
 
 def quicker(arr):
