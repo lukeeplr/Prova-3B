@@ -1,15 +1,14 @@
-def quicksort(array):
-    tam = len(array)
-    if tam < 2:
-        return array
-    from random import randint
+def quickSort(arr):
+    tam = len(arr)
+    if (tam < 2): return arr
+    pivp = getpivot(arr, 0, tam - 1)
+    pivot = arr[pivp]
     menor, igual, maior = [], [], []
-    pivot = array[randint(0, tam-1)]
-    for x in array:
-        if x < pivot: menor.append(x)
-        elif x > pivot: maior.append(x)
-        else: igual.append(x)
-    return (quicksort(menor) + igual + quicksort(maior))
+    for number in arr:
+        if (number < pivot):    menor.append(number)
+        elif (number > pivot):  maior.append(number)
+        else:   igual.append(number)
+    return (quickSort(menor) + igual + quickSort(maior))
 
 
 def getpivot(arr, c, f):
