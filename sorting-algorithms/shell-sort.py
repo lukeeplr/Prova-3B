@@ -8,18 +8,16 @@ def getH(n):
     return h
 
 
-def shell_sort(arr):
-    tam = len(arr)
-    h = getH(tam)
-    while h > 0:
-        for x in range(h,tam):
-            z = arr[x]
-            y = x
-            while arr[y - h] > z:
-                arr[y] = arr[y - h]
-                y -= 1
-                if y < h:
-                    break
-                arr[y] = z
-        h //= 3
+def shell_sort(arr): 
+    tam = len(arr) 
+    gap = getH(tam)
+    while gap > 0: 
+        for x in range(gap,tam): 
+            temp = arr[x] 
+            y = x 
+            while  y >= gap and arr[y-gap] >temp: 
+                arr[y] = arr[y-gap] 
+                y -= gap 
+            arr[y] = temp 
+        gap //= 3
     return arr
