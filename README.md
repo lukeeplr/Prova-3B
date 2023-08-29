@@ -1,2 +1,2 @@
-A collection of algorithms conceived during my Computer Science undergraduate program in the Data Structures course.
-Data structures such as Linked Lists, Search algorithms like Binary Search and some Sorting Algorithms such as Merge-Sort and Quick-Sort
+a collection of algorithms conceived during my computer science undergraduate program in the data structures course.
+data structures such as linked lists, search algorithms like binary search and some sorting algorithms such as merge-sort and quick-sort
