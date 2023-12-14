@@ -4,8 +4,8 @@ def binary_search_recursive(arr, key):
     if (arr[mid] == key):   return True
     elif (tam == 1):    return False
     else:
-        if (key < arr[mid]):    return binary_search(arr[:mid], key)
-        else:   return binary_search(arr[(mid + 1):], key)
+        if (key < arr[mid]):    return binary_search_recursive(arr[:mid], key)
+        else:   return binary_search_recursive(arr[(mid + 1):], key)
 
 
 
